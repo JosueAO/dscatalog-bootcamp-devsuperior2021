@@ -6,8 +6,10 @@ type Props = {
 }
 
 const formatPrice = (price: number) => {
-  return new Intl.NumberFormat('pt-Br', { maximumFractionDigits: 2 }).format(price);
+ // return new Intl.NumberFormat('pt-Br', { maximumFractionDigits: 2 }).format(price);
+ return new Intl.NumberFormat('pt-Br', { style: "currency", currency: 'BRL', maximumFractionDigits: 2 }).format(price);
 }
+
 
 const ProductPrice = ({ price }: Props) => (
   <div className="product-price-container">
